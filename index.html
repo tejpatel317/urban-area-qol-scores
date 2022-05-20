@@ -1,11 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css" />
         <title>Urban Area QOL Scores</title>
     </head>
     <body>
-        <h1>Hello World</h1>
+        <div class="container">
+            <div class="stickyheading">
+                <h1 class="title">Urban Area Quality Of Life Scores</h1>
+                <form>
+                    <label for="entercity">City Name </label>
+                    <input type="text" name="entercity" id="entercity" placeholder="Name of the Urban City">
+                    <label for="scorecategory">Score Category </label>
+                    <select name="scorecategory" id="scorecategory">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="housing">Housing</option>
+                        <option value="living">Cost of Living</option>
+                        <option value="startups">Startups</option>
+                        <option value="venture">Venture Capital</option>
+                        <option value="travel">Travel Connectivity</option>
+                        <option value="commute">Commute</option>
+                        <option value="business">Business Freedom</option>
+                        <option value="safety">Safety</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="education">Education</option>
+                        <option value="environmental">Environmental Quality</option>
+                        <option value="economy">Economy</option>
+                        <option value="taxation">Taxation</option>
+                        <option value="internet">Internet Access</option>
+                        <option value="leisure">Leisure & Culture</option>
+                        <option value="tolerance">Tolerance</option>
+                    </select>
+                    <label for="sortby">Sort By </label>
+                    <select name="sortby" id="sortby">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="hightolow">High to Low</option>
+                        <option value="lowtohigh">Low to High</option>
+                    </select>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="citycards">
+                <div class="citycard">
+                    <div class="cardimage" id="image1">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="invisibleblock">
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Housing</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Cost of Living</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Startups</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Venture Capital</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Travel Connectivity</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Commute</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Hello</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Hello</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Hello</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Hello</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                        <div class="dataline">
+                            <div class="leftline">
+                                <p>Hello</p>
+                            </div>
+                            <div class="rightline">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bordeaux_web-0bc8d1e9fd.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="citycard">
+                    <div class="cardimage">
+                        <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/bogota_web-7fc246764f.jpg" alt="City Image">
+                    </div>
+                    <div class="cardholder">
+                        <div class="cardtext">
+                            <h2 class="cityname">Bogota</h2>
+                            <h3 class="countyname">Colombia</h3>
+                        </div>
+                        <div class="cardbutton">
+                            <button type="button">Pin</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
