@@ -23,3 +23,12 @@ function iterateThroughCitiesData(data) {
     .then((resp) => resp.json())
     .then((data => obtainCityImage(data, cityName, cityCountryName, urbanCityMainData)))
 }
+
+//Store city image link
+//From city data passed as a parameter, access href for scores data, and send a fetch request for scores data
+function obtainCityImage(data, cityName, cityCountryName, urbanCityMainData){
+    let cityImage = data.photos[0].image.web
+    fetch(urbanCityMainData['_links']['ua:scores'].href)
+    .then((resp) => resp.json())
+    .then((data => obtainCityScores(data, cityName, cityCountryName, cityImage)))
+}
