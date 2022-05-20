@@ -32,3 +32,9 @@ function obtainCityImage(data, cityName, cityCountryName, urbanCityMainData){
     .then((resp) => resp.json())
     .then((data => obtainCityScores(data, cityName, cityCountryName, cityImage)))
 }
+
+//Store city scores object and call createCard function
+function obtainCityScores(data, cityName, cityCountryName, cityImage) {
+    let arrayOfCityQOLData = data.categories
+    createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData)
+}
