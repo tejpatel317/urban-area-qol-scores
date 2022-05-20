@@ -201,3 +201,8 @@ function filterLibrary(searchInput) {
         searchList[card].style.display = "inline-block"
     }
 }
+
+function sortPinnedItems(scoreCategoryInput, sortByInput) {
+    let pinnedList = Array.from(document.getElementById("pinneditems").childNodes)
+    pinnedList.shift();
+}
