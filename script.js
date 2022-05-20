@@ -218,5 +218,10 @@ function sortPinnedItems(scoreCategoryInput, sortByInput) {
             
             return dataA-dataB
         })
-    }    
+     
+        console.log(pinnedList)
+        for (const clonedCard of pinnedList) {
+            document.getElementById("pinneditems").appendChild(clonedCard)
+        }
+    }
 }
