@@ -205,10 +205,12 @@ function filterLibrary(searchInput) {
     }
 }
 
+//Obtains pinned items and uses sort method to sort based on user input
+//Sorted list appended to pinneditems
 function sortPinnedItems(scoreCategoryInput, sortByInput) {
     let pinnedList = Array.from(document.getElementById("pinneditems").childNodes)
     pinnedList.shift();
-    console.log(sortByInput)
+
     if (sortByInput === "lowtohigh") {
         pinnedList.sort((a,b)=>{
             let idForDataA = `${a.id} ${scoreCategoryInput}`
@@ -219,11 +221,11 @@ function sortPinnedItems(scoreCategoryInput, sortByInput) {
             return dataA-dataB
         })
      
-        console.log(pinnedList)
         for (const clonedCard of pinnedList) {
             document.getElementById("pinneditems").appendChild(clonedCard)
         }
     }
+
     else if (sortByInput === "hightolow") {
         pinnedList.sort((a,b)=>{
             let idForDataA = `${a.id} ${scoreCategoryInput}`
@@ -233,11 +235,9 @@ function sortPinnedItems(scoreCategoryInput, sortByInput) {
             
             return dataB-dataA
         })
-     
-        console.log(pinnedList)
+
         for (const clonedCard of pinnedList) {
             document.getElementById("pinneditems").appendChild(clonedCard)
         }
     }
-    
 }
