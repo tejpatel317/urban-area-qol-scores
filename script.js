@@ -171,3 +171,13 @@ document.querySelector("form").addEventListener("submit" , (e)=> {
     let searchInput = e.target.entercity.value
     filterLibrary(searchInput)
 })
+
+function filterLibrary(searchInput) {
+    let lowerCaseSearchInput = searchInput.toLowerCase()
+    let cardList = Array.from(document.getElementById("citycards").childNodes)
+
+    for (const card in cardList) {
+        cardList[card].style.display = "none"
+    }
+
+}
