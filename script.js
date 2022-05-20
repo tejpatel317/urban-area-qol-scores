@@ -175,9 +175,17 @@ document.querySelector("form").addEventListener("submit" , (e)=> {
 function filterLibrary(searchInput) {
     let lowerCaseSearchInput = searchInput.toLowerCase()
     let cardList = Array.from(document.getElementById("citycards").childNodes)
-
+    let searchList = cardList.filter((card) => {
+        let index = false;
+        let length = lowerCaseSearchInput.length
+        let cityNameInLowerCase = card.id.toLowerCase()
+        if ((cityNameInLowerCase.substring(0,length)) === (lowerCaseSearchInput.substring(0, length))){
+            index = true;
+        }
+        return index
+    })
+    
     for (const card in cardList) {
         cardList[card].style.display = "none"
     }
-
 }
