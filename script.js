@@ -146,7 +146,7 @@ function pinCard(e) {
     clonedNodeButton.setAttribute("id", `cloned${cityName} Pin`)
     clonedNodeButton.textContent = "Remove"
     clonedNodeButton.addEventListener("click", removeCard)
-
+    
     let cardImageDiv = clonedNode.querySelector("div")
     cardImageDiv.style.display = "none"
     
@@ -157,7 +157,10 @@ function pinCard(e) {
         let clonedDataID = "cloned" + dataElements[i].id
         dataElements[i].setAttribute("id", `${clonedDataID}`)
     }
+
+    document.getElementById("pinneditems").appendChild(clonedNode)
 }
+
 
 //Removes pinned card
 function removeCard(e) {
@@ -205,4 +208,15 @@ function filterLibrary(searchInput) {
 function sortPinnedItems(scoreCategoryInput, sortByInput) {
     let pinnedList = Array.from(document.getElementById("pinneditems").childNodes)
     pinnedList.shift();
+
+    if (sortByInput === "lowtohigh") {
+        pinnedList.sort((a,b)=>{
+            let idForDataA = `${a.id} ${scoreCategoryInput}`
+            let idForDataB = `${b.id} ${scoreCategoryInput}`
+            let dataA = parseFloat(document.getElementById(idForDataA).textContent.split(" ").slice("-1")[0])
+            let dataB = parseFloat(document.getElementById(idForDataB).textContent.split(" ").slice("-1")[0])
+            
+            return dataA-dataB
+        })
+    }    
 }
