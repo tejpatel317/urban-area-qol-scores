@@ -12,3 +12,14 @@ function iterateThroughCitiesArray(data) {
         .then((data => iterateThroughCitiesData(data)))
     }
 }
+
+//Store city name, country name, and city data
+//Access image href, and send fetch request for image data of city
+function iterateThroughCitiesData(data) {
+    let urbanCityMainData = data;
+    let cityName = data.name;
+    let cityCountryName = data['_links']['ua:countries'][0].name;
+    fetch(data['_links']['ua:images'].href)
+    .then((resp) => resp.json())
+    .then((data => obtainCityImage(data, cityName, cityCountryName, urbanCityMainData)))
+}
