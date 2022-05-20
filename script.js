@@ -42,7 +42,6 @@ function obtainCityScores(data, cityName, cityCountryName, cityImage) {
 //Creates card for each city
 //mouseover and mouseleave event added on cardImageDiv/InvisibleBlock
 //click event added on pinButton, callback pinCard()
-
 function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
    
     let cityCard = document.createElement("div")
@@ -132,6 +131,10 @@ function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
     document.getElementById("citycards").appendChild(cityCard);
 }
 
+//When a node is cloned, all of its IDs are also cloned. 
+//To avoid two different occasions of the same ID, each ID in the cloned node is changed.
+//Click event added to Remove button, removeCard called
+//Sets the invisibleblock to display when a card is pinned
 function pinCard(e) {
     let cityName = e.target.id.split(" ")[0]
     let cityCard = (document.getElementById(cityName))
@@ -156,7 +159,15 @@ function pinCard(e) {
     }
 }
 
+//Removes pinned card
 function removeCard(e) {
     let clonedCityName = e.target.id.split(" ")[0]
     document.getElementById(clonedCityName).remove()
 }
+
+document.querySelector("form").addEventListener("submit" , (e)=> {
+    e.preventDefault();
+    
+    let searchInput = e.target.entercity.value
+    filterLibrary(searchInput)
+})
