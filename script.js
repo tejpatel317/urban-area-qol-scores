@@ -131,3 +131,11 @@ function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
 
     document.getElementById("citycards").appendChild(cityCard);
 }
+
+function pinCard(e) {
+    let cityName = e.target.id.split(" ")[0]
+    let cityCard = (document.getElementById(cityName))
+
+    let clonedNode = cityCard.cloneNode(true)
+    clonedNode.setAttribute("id", `cloned${cityName}`)
+}
