@@ -1,0 +1,137 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background:url(https://www.designbolts.com/wp-content/uploads/2012/11/Free-Topographic-Map-Seamless-pattern.jpg);;
+}
+
+.stickyheading {
+  text-align: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.stickyheading h1 {
+  font-size: 70px;
+  font-weight: 300;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.stickyheading form {
+  font-size: 16px;
+  font-weight: 700;
+  background-color: gray;
+  padding: 5px;
+}
+
+.stickyheading form select{
+  margin-right: 20px;
+}
+
+.stickyheading form input{
+  margin-right: 20px;
+}
+
+.citycard{
+  display: inline-block;
+  background-color: white;
+  border-radius: 20px;
+  width: 30%;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.cardimage img{
+  height: 250px;
+  width: auto;
+  object-fit: fill;
+}
+
+.cardholder{
+  overflow: hidden;
+  background-color: lightblue;
+  border: 21x solid black;
+  margin-top: 10px;
+}
+
+.cardtext{
+  text-align: center;
+  width: 69%;
+  height: 100%;
+  float: left;
+  background-color: lightgreen;
+  border-right: 1px solid black;
+}
+
+.cardbutton{
+  text-align: center;
+  width:29%;
+  float: right;
+}
+
+button{
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.invisibleblock {
+  display: none;
+  overflow: hidden;
+  height: 250px;
+  margin-top: 2px;
+}
+
+.dataline {
+  margin: auto;
+  margin-top: 1.125%;
+  margin-bottom: 1.125%;
+  height: 10%;
+}
+.rightline{
+  margin:2px;
+  text-align: center;
+  width:46%;
+  float: right;
+  border: 2px solid black;
+  background: linear-gradient(to right, darkblue 40%, grey 1%, grey 59%);
+}
+
+.rightline p{
+  color: white;
+  font-size: 16px;
+  text-shadow:
+      0.07em 0 black,
+      0 0.07em black,
+      -0.07em 0 black,
+      0 -0.07em black;
+}
+
+.leftline{
+  margin: 2px;
+  text-align: center;
+  width:49%;
+  float: left;
+  border: 2px solid black;
+}
+
+.leftline p{
+  color: white;
+  font-size: 16px;
+  text-shadow:
+      0.07em 0 black,
+      0 0.07em black,
+      -0.07em 0 black,
+      0 -0.07em black;
+}
+
+#pinneditems{
+  background-color: lightgrey;
+  border: 2px solid black
+}
