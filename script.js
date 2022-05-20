@@ -218,10 +218,20 @@ function sortPinnedItems(scoreCategoryInput, sortByInput) {
             
             return dataA-dataB
         })
-     
-        console.log(pinnedList)
+
         for (const clonedCard of pinnedList) {
             document.getElementById("pinneditems").appendChild(clonedCard)
         }
+    }
+
+    else if (sortByInput === "hightolow") {
+        pinnedList.sort((a,b)=>{
+            let idForDataA = `${a.id} ${scoreCategoryInput}`
+            let idForDataB = `${b.id} ${scoreCategoryInput}`
+            let dataA = parseFloat(document.getElementById(idForDataA).textContent.split(" ").slice("-1")[0])
+            let dataB = parseFloat(document.getElementById(idForDataB).textContent.split(" ").slice("-1")[0])
+            
+            return dataB-dataA
+        })
     }
 }
