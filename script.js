@@ -41,6 +41,8 @@ function obtainCityScores(data, cityName, cityCountryName, cityImage) {
 
 //Creates card for each city
 //mouseover and mouseleave event added on cardImageDiv/InvisibleBlock
+//click event added on pinButton, callback pinCard()
+
 function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
    
     let cityCard = document.createElement("div")
@@ -124,6 +126,8 @@ function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
         e.target.style.display = "none"
         cardImage.style.display = "block"
     })
+
+    pinButton.addEventListener("click", pinCard)
 
     document.getElementById("citycards").appendChild(cityCard);
 }
