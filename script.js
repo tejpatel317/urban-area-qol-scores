@@ -188,4 +188,8 @@ function filterLibrary(searchInput) {
     for (const card in cardList) {
         cardList[card].style.display = "none"
     }
+
+    for (const card in searchList) {
+        searchList[card].style.display = "inline-block"
+    }
 }
