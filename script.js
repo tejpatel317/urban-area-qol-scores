@@ -165,13 +165,21 @@ function removeCard(e) {
     document.getElementById(clonedCityName).remove()
 }
 
+//Adds submit event on form, calls filter Library, and sortPinnedItems
 document.querySelector("form").addEventListener("submit" , (e)=> {
     e.preventDefault();
     
     let searchInput = e.target.entercity.value
     filterLibrary(searchInput)
+
+    let scoreCategoryInput = e.target.scorecategory.value
+    let sortByInput = e.target.sortby.value
+    sortPinnedItems(scoreCategoryInput, sortByInput)
 })
 
+//Uses filter method to find cards which match user search input
+//Sets all cards to display none
+//Sets cards which match user search input to display on DOM as inline-block
 function filterLibrary(searchInput) {
     let lowerCaseSearchInput = searchInput.toLowerCase()
     let cardList = Array.from(document.getElementById("citycards").childNodes)
