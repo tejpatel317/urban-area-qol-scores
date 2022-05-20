@@ -143,6 +143,17 @@ function pinCard(e) {
     clonedNodeButton.setAttribute("id", `cloned${cityName} Pin`)
     clonedNodeButton.textContent = "Remove"
     clonedNodeButton.addEventListener("click", removeCard)
+
+    let cardImageDiv = clonedNode.querySelector("div")
+    cardImageDiv.style.display = "none"
+    
+    let invisibleBlock = clonedNode.querySelector("div.invisibleblock")
+    invisibleBlock.style.display = "block"
+    let dataElements = invisibleBlock.querySelectorAll("p")
+    for (let i =0; i<dataElements.length; i++) {
+        let clonedDataID = "cloned" + dataElements[i].id
+        dataElements[i].setAttribute("id", `${clonedDataID}`)
+    }
 }
 
 function removeCard(e) {
