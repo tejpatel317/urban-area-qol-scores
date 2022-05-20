@@ -40,6 +40,7 @@ function obtainCityScores(data, cityName, cityCountryName, cityImage) {
 }
 
 //Creates card for each city
+//mouseover and mouseleave event added on cardImageDiv/InvisibleBlock
 function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
    
     let cityCard = document.createElement("div")
@@ -113,6 +114,16 @@ function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
     pinButton.textContent = "Pin";
     pinButton.setAttribute("id", `${cityName} Pin`)
     cardButton.appendChild(pinButton)
+
+    cardImageDiv.addEventListener("mouseover", (e) => {
+        e.target.style.display = "none"
+        invisibleBlock.style.display = "block"
+    })
+
+    invisibleBlock.addEventListener("mouseleave", (e) => {
+        e.target.style.display = "none"
+        cardImage.style.display = "block"
+    })
 
     document.getElementById("citycards").appendChild(cityCard);
 }
