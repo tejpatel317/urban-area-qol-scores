@@ -136,7 +136,11 @@ function createCard(cityName, cityCountryName, cityImage, arrayOfCityQOLData) {
 //Click event added to Remove button, removeCard called
 //Sets the invisibleblock to display when a card is pinned
 function pinCard(e) {
-    let cityName = e.target.id.split(" ")[0]
+    let pinButtonID = e.target.id.split(" ")
+    if (pinButtonID.length > 1) {
+        pinButtonID.pop()
+    }
+    let cityName = pinButtonID.join(" ")
     let cityCard = (document.getElementById(cityName))
 
     let clonedNode = cityCard.cloneNode(true)
@@ -164,7 +168,11 @@ function pinCard(e) {
 
 //Removes pinned card
 function removeCard(e) {
-    let clonedCityName = e.target.id.split(" ")[0]
+    let clonedPinButtonID = e.target.id.split(" ")
+    if (clonedPinButtonID.length > 1) {
+        clonedPinButtonID.pop()
+    }
+    let clonedCityName = clonedPinButtonID.join(" ")
     document.getElementById(clonedCityName).remove()
 }
 
